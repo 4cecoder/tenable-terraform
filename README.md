@@ -1,5 +1,7 @@
 # tenable-terraform
 
+[![Go](https://github.com/4cecoder/tenable-terraform/actions/workflows/go.yml/badge.svg)](https://github.com/4cecoder/tenable-terraform/actions/workflows/go.yml)
+
 ## Overview
 This document outlines the development roadmap for the `tenable-terraform` custom provider. This provider interfaces with Tenable's API (referenced here: [Tenable API Documentation](https://developer.tenable.com/reference/navigate)) to manage resources like managed credentials, scanner groups, and vulnerability scans.
 
