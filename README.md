@@ -14,7 +14,7 @@ This document outlines the development roadmap for the `tenable-terraform` custo
 ### Setting Up the Development Environment
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/tenable-terraform.git
+   git clone https://github.com/4cecoder/tenable-terraform.git
    cd tenable-terraform
    go mod tidy
    go build -o tenable-terraform
