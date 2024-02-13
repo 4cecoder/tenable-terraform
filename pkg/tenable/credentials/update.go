@@ -9,15 +9,6 @@ import (
 	"net/http"
 )
 
-// CredentialUpdate represents the body for updating a managed credential.
-type CredentialUpdate struct {
-	Name        string                 `json:"name,omitempty"`
-	Description string                 `json:"description,omitempty"`
-	AdHoc       *bool                  `json:"ad_hoc,omitempty"`
-	Settings    map[string]interface{} `json:"settings,omitempty"`
-	Permissions []Permission           `json:"permissions,omitempty"`
-}
-
 // UpdateCredential updates the details of a managed credential by its UUID.
 func UpdateCredential(apiKey, uuid string, update CredentialUpdate) error {
 	client := &http.Client{}

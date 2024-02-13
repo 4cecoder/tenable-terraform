@@ -33,6 +33,15 @@ type CredentialList struct {
 	Total int `json:"total"`
 }
 
+// CredentialUpdate represents the body for updating a managed credential.
+type CredentialUpdate struct {
+	Name        string                 `json:"name,omitempty"`
+	Description string                 `json:"description,omitempty"`
+	AdHoc       *bool                  `json:"ad_hoc,omitempty"`
+	Settings    map[string]interface{} `json:"settings,omitempty"`
+	Permissions []Permission           `json:"permissions,omitempty"`
+}
+
 // Permission represents user permissions for the managed credential.
 type Permission struct {
 	Type      string `json:"type"`
