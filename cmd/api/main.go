@@ -12,15 +12,15 @@ import (
 // @host localhost:8080
 // @BasePath /
 func main() {
-	// Initialize the Gin router
 	r := gin.Default()
 
 	// Define your API routes here
-	// Example:
-	// r.GET("/resources", getResources)
-	// r.POST("/resources", createResource)
-	// r.PUT("/resources/:id", updateResource)
-	// r.DELETE("/resources/:id", deleteResource)
+	r.POST("/credentials", CreateCredentialHandler)
+
+	r.GET("/credentials/:id", GetCredentialHandler)
+	r.PUT("/credentials/:id", UpdateCredentialHandler)
+	r.DELETE("/credentials/:id", DeleteCredentialHandler)
+	r.GET("/credentials", ListCredentialsHandler)
 
 	// Run the server
 	err := r.Run(":8080")
